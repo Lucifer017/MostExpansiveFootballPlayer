@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Pemain Bola Termahal</string>
+
+    <string name="user_profil">Profil</string>
+    <string name="bahasa">Bahasa</string>
+
+    <string name="detail_pemain">Detail Pemain</string>
+    <string name="profil_mahasiswa">Profil Mahasiswa</string>
+</resources>

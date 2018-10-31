@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Most Expansive Football Player</string>
+
+    <string name="user_profil">Profile</string>
+    <string name="bahasa">Language</string>
+
+    <string name="detail_pemain">Player Detail</string>
+    <string name="profil_mahasiswa">Student Profile</string>
+</resources>
