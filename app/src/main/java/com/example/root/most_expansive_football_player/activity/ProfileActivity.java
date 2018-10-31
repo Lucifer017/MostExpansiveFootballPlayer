@@ -1,10 +1,15 @@
 package com.example.root.most_expansive_football_player.activity;
 
+import android.content.Intent;
+import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import com.example.root.most_expansive_football_player.R;
 import butterknife.BindView;
 import butterknife.ButterKnife;
+
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -41,7 +46,7 @@ public class ProfileActivity extends AppCompatActivity {
 
     private void initUI() {
         Glide.with(this)
-                .load("https://scontent-sin6-2.cdninstagram.com/vp/09b790ebdc0e1f97be971e1537fb5662/5C744191/t51.2885-19/s150x150/44421097_373333243484836_8361092429457129472_n.jpg")
+                .load("https://image.ibb.co/b8Um00/Screenshot-20181029-011301-2.png")
                 .into(imageMahasiswa);
         txtNama.setText("Muhammad Irfan Firdaus");
         txtNim.setText("1157050106");
@@ -49,15 +54,27 @@ public class ProfileActivity extends AppCompatActivity {
         txtAlamat.setText("Jl. Manisi Kosan Al-Barokah Kamar 5, CIbiru, Bandung");
     }
 
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+
+        return true;
+    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
-            case android.R.id.home : {
-                finish();
+        switch (item.getItemId()) {
+
+            case R.id.nav_bahasa:
+                Intent intent = new Intent(Settings.ACTION_LOCALE_SETTINGS);
+                startActivity(intent);
                 break;
-            }
         }
-        return super.onOptionsItemSelected(item);
+        return true;
     }
+
 
 }
